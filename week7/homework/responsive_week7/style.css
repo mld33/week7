@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+}
+html {
+    font-size: 20px;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+header,
+main,
+aside,
+footer
+{
+    color: blueviolet;
+    font-family: 'Pacifico', cursive;
+    font-size: 1rem;
+    text-align: center;
+    
+}
+
+.respon-example {
+    display: grid;
+    grid-template: 15% 1fr 20% / 1fr 35%;
+}
+
+.respon-example-header {
+    grid-column: span 2;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+}
+
+.respon-example-main {
+    display: grid;
+    grid-template: 1fr 20% 20% / 1fr 1fr;
+    gap: 1rem;
+    background: beige;
+    padding: 1rem;
+}
+
+.respon-example-footer {
+    grid-column: span 2;
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
+    gap: 1rem;
+    background: grey;
+    padding: 1rem;
+}
+
+.respon-example-footer > div {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: lightgray;
+    padding: 2rem 1rem;
+}
+
+.respon-example-aside {
+    background: aquamarine;
+    padding: 1rem;
+}
+.respon-example-content {
+    grid-column: span 2;
+}
+
+[class^="respon-example-block"] {
+    background: bisque;
+    padding: 2rem 1rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.respon-example-block-3 {
+    grid-column: span 2;
+}
+

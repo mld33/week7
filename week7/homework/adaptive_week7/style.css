@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+html {
+    font-size: 20px;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+header,
+main,
+aside,
+footer
+{
+    color: rgb(226, 43, 98);
+    font-family: 'Pacifico', cursive;
+    font-size: 1rem;
+    text-align: center;
+    
+}
+.adaptive-example-header {
+    grid-column: span 2;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: rgb(225, 166, 166);
+    color: rgb(134, 43, 226);
+}
+
+.adaptive-example-main {
+    background: beige;
+}
+.adaptive-example-footer {
+    grid-column: span 2;
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
+    gap: 1rem;
+    background: grey;
+    padding: 1rem;
+}
+.adaptive-example-footer > div {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: lightgray;
+    padding: 2rem 1rem;
+}
+.adaptive-example-aside {
+    background: aquamarine;
+    padding: 1rem;
+}
+.adaptive-example-content {
+    grid-column: span 2;
+}
+
+[class^="adaptive-example-block"] {
+    background: bisque;
+    padding: 2rem 1rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.adaptive-example-block-3 {
+    grid-column: span 2;
+}
+@media screen and (min-width: 1440px) 
+    { 
+        .adaptive-example {
+        display: grid;
+        grid-template: 15% 1fr 20% / 1fr 35%;
+        }
+        .adaptive-example-main {
+            display: grid;
+            grid-template: 1fr 20% 20% / 1fr 1fr;
+            gap: 1rem;
+            padding: 1rem;
+        }
+        .adaptive-example-footer {
+            grid-column: span 2;
+            display: grid;
+            grid-template: 1fr / repeat(4, 1fr);
+            gap: 1rem;
+            background: grey;
+            padding: 1rem;
+        }
+    
+    }  
+
+@media screen and (max-width: 600px) 
+        {
+    .adaptive-example-footer
+    {display: none;} 
+    
+    .adaptive-example
+    .adaptive-example-content {
+    height: 30vh;
+    }
+    .adaptive-example
+    .adaptive-example-content {
+    height: 30vh;
+    }
+    .adaptive-example
+    .adaptive-example-content {
+    height: 30vh;
+    }
+}    
+
